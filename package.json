@@ -2,11 +2,16 @@
   "name": "sdfs",
   "version": "0.0.0",
   "description": "smart device file system",
-  "main": "index.js",
+  "main": "dist/index.js",
   "repository": "ssh://git@github.com/sat0yu/sdfs.git",
   "author": "Yusuke Sato <yusuke1.sato9.git@gmail.com>",
   "license": "MIT",
   "private": false,
+  "scripts": {
+    "build": "yarn tsc",
+    "start": "yarn node --unhandled-rejections=strict dist/index.js",
+    "watch": "ts-node-dev --respawn -- src/index.ts"
+  },
   "devDependencies": {
     "@types/node": "^14.14.13",
     "ts-node-dev": "^1.1.1",
